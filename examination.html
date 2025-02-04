@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Navigation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+        .button {
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .new-exam {
+            background-color: #28a745;
+        }
+        .previous-test {
+            background-color: #ff5733;
+        }
+        .new-exam:hover {
+            background-color: #218838;
+        }
+        .previous-test:hover {
+            background-color: #c74328;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <a href="new_exam.html" class="button new-exam">New Exam</a>
+        <a href="previous_test.html" class="button previous-test">Previous Test</a>
+    </div>
+</body>
+</html>
