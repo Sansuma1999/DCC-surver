@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application for Examination</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #0066cc;
+        }
+        .instructions {
+            font-size: 14px;
+            background: #d9edf7;
+            border: 1px solid #bce8f1;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .table th, .table td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+        .table th {
+            background: #f2f2f2;
+        }
+        .btn-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 14px;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn.reset {
+            background: #d9534f;
+        }
+        .btn.submit {
+            background: #5cb85c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Application for Examination<br> (পৰীক্ষাৰ বাবে আবেদন)</h1>
+        <div class="instructions">
+            <p><strong>IMPORTANT INSTRUCTIONS/ গুৰুত্বপূৰ্ণ নিৰ্দেশনা:</strong></p>
+            <p>The registration number input should follow the specified format mentioned in the table below for online verification.</p>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Registration Sessions</th>
+                    <th>Sample Registration Number Format</th>
+                    <th>Registration Sessions</th>
+                    <th>Sample Registration Number Format</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2023-01 to 2025-04</td>
+                    <td>As appeared in the Registration Certificate</td>
+                    <td>2024-25</td>
+                    <td>01A1449830405</td>
+                </tr>
+                <tr>
+                    <td>2025-06</td>
+                    <td>01A1699170506</td>
+                    <td>2023-07</td>
+                    <td>01A1629206007</td>
+                </tr>
+                <tr>
+                    <td>2025-08</td>
+                    <td>01A1649730708</td>
+                    <td>2025-09</td>
+                    <td>01A2039080809</td>
+                </tr>
+                <!-- Add other rows as needed -->
+            </tbody>
+        </table>
+        <div class="form-section">
+            <p><strong>PLEASE ENTER BELOW ACADEMIC DETAILS/ অনুগ্ৰহ কৰি শৈক্ষিক বিৱৰণ তলত উল্লেখ কৰক:</strong></p>
+            <form>
+                <div class="form-group">
+                    <label for="course">Course*</label>
+                    <select id="course" required>
+                        <option value="">Please Select</option>
+                        <!-- Add options here -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="registration-number">Valid Registration Number*</label>
+                    <input type="text" id="registration-number" required>
+                </div>
+                <div class="form-group">
+                    <label for="year-registration">Year of Registration*</label>
+                    <select id="year-registration" required>
+                        <option value="">Select Year</option>
+                        <!-- Add year options -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="examination-roll">Valid Examination Roll*</label>
+                    <input type="text" id="examination-roll" required>
+                </div>
+                <div class="form-group">
+                    <label for="examination-number">Valid Examination Number</label>
+                    <input type="text" id="examination-number">
+                </div>
+                <div class="btn-group">
+                    <button type="reset" class="btn reset">Reset</button>
+                    <button type="submit" class="btn submit">Verify & Proceed</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
