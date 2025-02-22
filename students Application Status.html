@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science Courses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+        img {
+            pointer-events: none;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            z-index: 1000;
+            display: none;
+        }
+        .popup h1 {
+            background: black;
+            color: white;
+            padding: 10px;
+            margin: 0;
+        }
+        .popup button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+        }
+        .user-info img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .user-name {
+            display: flex;
+            align-items: center;
+        }
+        .user-name img {
+            width: 20px;
+            height: 20px;
+            margin-left: 5px;
+        }
+        .process-flow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .process-flow div {
+            background: lightgreen;
+            padding: 10px;
+            border-radius: 50%;
+            text-align: center;
+            font-weight: bold;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            box-shadow: 0px 0px 15px lightgreen;
+        }
+        .process-flow .line {
+            width: 80px;
+            height: 8px;
+            background: linear-gradient(to right, lightgreen, black);
+            margin: 0 10px;
+            border-radius: 4px;
+            box-shadow: 0px 0px 10px lightgreen;
+        }
+        .approved img {
+            width: 100px;
+        }
+        .ad-popup {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            display: none;
+            z-index: 1000;
+        }
+    </style>
+    <script>
+        function showPopup() {
+            document.getElementById("popup").style.display = "block";
+        }
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+        
+        function toggleAd() {
+            const ad = document.getElementById("ad-popup");
+            setInterval(() => {
+                ad.style.display = "block";
+                setTimeout(() => {
+                    ad.style.display = "none";
+                }, 3000);
+            }, 5000);
+        }
+        
+        window.onload = function() {
+            setTimeout(showPopup, 2000);
+            toggleAd();
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="user-info">
+            <img src="user.png" alt="User Profile">
+            <span class="user-name">User Name <img src="verr.png" alt="Verified"></span>
+        </div>
+        
+        <div class="process-flow">
+            <div>Official Processing</div>
+            <div class="line"></div>
+            <div>Bank Account Processing</div>
+            <div class="line" style="background: black;"></div>
+            <div class="approved">
+                <img src="image-removebg-preview (18).png" alt="Approved">
+            </div>
+        </div>
+        
+        <div class="content">
+            <div>
+                <h2>What is computer science?</h2>
+                <p>Computer science focuses on applying computing, algorithms, and programming techniques...</p>
+            </div>
+            <img src="computer-science-image.jpg" alt="Computer Science Image">
+        </div>
+    </div>
+    
+    <div id="popup" class="popup">
+        <h1>Learn computer science with online courses and programs</h1>
+        <p>Computers power everything from trading on the stock market to weather forecasting...</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <img id="ad-popup" class="ad-popup" src="banner.jpg" alt="Brahma Graphic Design Ad">
+</body>
+</html>
